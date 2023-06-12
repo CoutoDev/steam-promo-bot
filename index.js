@@ -11,7 +11,7 @@ const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 
 client.once(Events.ClientReady, async c => {
 	try {
-		cron.schedule('* * * * * *', async () => {
+		cron.schedule('0 0 8 * * *', async () => {
 			const channel = await c.channels.fetch('824302971914289194');
 
 			const steamPromotions = await axios.get('https://store.steampowered.com/contenthub/ajaxgetcontenthubdata', {
@@ -45,12 +45,12 @@ client.once(Events.ClientReady, async c => {
 				`);
 			});
 		});
-		// Log in to Discord with your client's token
-		client.login(token);
 	}
 	catch (error) {
 		console.error(error);
 	}
 });
 
+// Log in to Discord with your client's token
+client.login(token);
 
