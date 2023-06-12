@@ -1,18 +1,18 @@
 {
   "name": "steam-promo-bot",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
-  },
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/CoutoDev/steam-promo-bot.git",
+  "author": "CoutoDev <c.svitor@yahoo.com.br>",
+  "license": "MIT",
   "devDependencies": {
-    "typescript": "^5.0.2",
-    "vite": "^4.3.9"
+    "eslint": "^8.42.0",
+    "nodemon": "^2.0.22"
   },
   "dependencies": {
-    "discord.js": "^14.11.0"
+    "axios": "^1.4.0",
+    "discord.js": "^14.11.0",
+    "dotenv": "^16.1.4",
+    "node-cron": "^3.0.2"
   }
 }
